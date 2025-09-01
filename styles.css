@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #3c1518;
+  text-align: center;
+}
+
+/* Heading responsive */
+h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  margin: 1rem 0;
+  color: #fff;
+}
+
+.container {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1rem;
+  margin: 1rem auto;
+}
+
+/* Box size FIXED (not shrinking) */
+.box {
+  height: 120px;
+  width: 120px;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  font-size: 3rem;
+  color: #fff94f;
+  background-color: #a44200;
+  cursor: pointer;
+}
+
+/* Buttons responsive */
+.reset-btn,
+.new-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: clamp(0.9rem, 2vw, 1.25rem);
+  background-color: #d58936;
+  color: black;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+/* Winner message responsive */
+.msg {
+  color: #fafad4;
+  font-size: clamp(1.5rem, 6vw, 3rem);
+  text-align: center;
+}
+
+.msg-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+/* ✅ Media Queries */
+@media (max-width: 768px) {
+  .box {
+    height: 90px;
+    width: 90px;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 365px) {
+  .box {
+    height: 90px;
+    width: 90px;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 335px) {
+  .box {
+    height: 75px;
+    width: 75px;
+    font-size: 2rem;
+  }
+}
