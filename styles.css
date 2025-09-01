@@ -9,7 +9,6 @@ body {
   text-align: center;
 }
 
-/* Heading responsive */
 h1 {
   font-size: clamp(1.5rem, 5vw, 3rem);
   margin: 1rem 0;
@@ -29,8 +28,15 @@ h1 {
   gap: 1rem;
   margin: 1rem auto;
 }
+button {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
 
-/* Box size FIXED (not shrinking) */
+button:focus {
+  outline: none;
+}
+
 .box {
   height: 120px;
   width: 120px;
@@ -42,8 +48,9 @@ h1 {
   background-color: #a44200;
   cursor: pointer;
 }
-
-/* Buttons responsive */
+.box:active {
+  background-color: #a44200;
+}
 .reset-btn,
 .new-btn {
   padding: 0.75rem 1.5rem;
@@ -55,8 +62,11 @@ h1 {
   cursor: pointer;
   margin: 0.5rem;
 }
+.reset-btn:active,
+.new-btn:active {
+  background-color: #d58936;
+}
 
-/* Winner message responsive */
 .msg {
   color: #fafad4;
   font-size: clamp(1.5rem, 6vw, 3rem);
@@ -75,7 +85,7 @@ h1 {
   display: none;
 }
 
-/* ✅ Media Queries */
+
 @media (max-width: 768px) {
   .box {
     height: 90px;
@@ -97,4 +107,5 @@ h1 {
     width: 75px;
     font-size: 2rem;
   }
+
 }
